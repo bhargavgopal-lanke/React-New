@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "This is a react repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhargavgopal-lanke/React-New.git"
+  },
+  "author": "BhargavGopal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhargavgopal-lanke/React-New/issues"
+  },
+  "homepage": "https://github.com/bhargavgopal-lanke/React-New#readme"
+}
