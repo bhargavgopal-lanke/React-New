@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bhargavgopal-lanke/React-New/issues"
   },
-  "homepage": "https://github.com/bhargavgopal-lanke/React-New#readme"
+  "homepage": "https://github.com/bhargavgopal-lanke/React-New#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
 }
