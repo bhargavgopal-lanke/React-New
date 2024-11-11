@@ -21,3 +21,7 @@
 - Differential Bundling - Support older browsers
 - Daignostic
 - Error Handling
+
+# Babel
+
+- Babel is a javascript compiler
