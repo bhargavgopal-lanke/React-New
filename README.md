@@ -17,3 +17,7 @@
 - Minification
 - Bundling
 - Compressing
+- Code splitting
+- Differential Bundling - Support older browsers
+- Daignostic
+- Error Handling
