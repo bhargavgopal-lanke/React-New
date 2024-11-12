@@ -1,14 +1,14 @@
 import React from "react";
-import reactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
-const headerComponent = () => {
+const HeaderComponent = () => {
   return <h1>This is a header component</h1>;
 };
 
-const mainComponent = () => {
+const MainComponent = () => {
   return (
     <div>
-      <headerComponent />
+      <HeaderComponent />
       <h2>This is a main component.</h2>
     </div>
   );
@@ -16,4 +16,4 @@ const mainComponent = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<mainComponent />);
+root.render(<MainComponent />);
