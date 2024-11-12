@@ -6,7 +6,12 @@ const headerComponent = () => {
 };
 
 const mainComponent = () => {
-  return <h2>This is a main component.</h2>;
+  return (
+    <div>
+      <headerComponent />
+      <h2>This is a main component.</h2>
+    </div>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
