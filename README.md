@@ -6,6 +6,7 @@
 - if I dont use both above I dont want to upgrade my depedency.
 2. NPM is used for installing a package
 3. NPX is used for executing a package.
+4. After installing react and react dom no need of CDN's in our app.
 
 # Parcel
 - It created a Dev Build.

@@ -1,19 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import logoimage from "./public/logo-image.webp";
 
 const HeaderComponent = () => {
-  return <h1>This is a header component</h1>;
+  return (
+    <div className="header">
+      <div>
+        <img src={logoimage} alt="" title="logo" width="50px" height="50px" />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
 };
 
-const MainComponent = () => {
+const AppLayout = () => {
   return (
-    <div>
+    <div className="app">
       <HeaderComponent />
-      <h2>This is a main component.</h2>
     </div>
   );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<MainComponent />);
+root.render(<AppLayout />);
