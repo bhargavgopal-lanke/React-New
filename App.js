@@ -5,8 +5,8 @@ import logoimage from "./public/logo-image.webp";
 const HeaderComponent = () => {
   return (
     <div className="header">
-      <div>
-        <img src={logoimage} alt="" title="logo" width="50px" height="50px" />
+      <div className="logo">
+        <img src={logoimage} alt="" title="logo" />
       </div>
       <div className="nav-items">
         <ul>
