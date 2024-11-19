@@ -7,6 +7,9 @@ const Body = () => {
       <div className="search">Search</div>
       <div className="res-container">
         <RestaurentCard />
+        <RestaurentCard />
+        <RestaurentCard />
+        <RestaurentCard />
       </div>
     </div>
   );

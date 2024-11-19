@@ -25,7 +25,7 @@ p {
 }
 
 .body-sec {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -45,34 +45,42 @@ p {
   border-radius: 25px;
 }
 
-.res-card:hover {
-  cursor: pointer;
-  border: 1px solid #ccc;
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
-.res-card {
-  width: 33%;
+.res-container .res-card:hover {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.res-container .res-card {
+  width: 27%;
   border: 1px solid #111;
   border-radius: 10px;
   padding: 30px;
   margin-right: 15px;
   background-color: #f0f0f0;
+  margin-bottom: 20px;
 }
 
 .search {
   padding: 10px 0;
 }
 
-.res-card h3 {
+.res-container .res-card h3 {
   margin-bottom: 15px;
 }
-.res-card .card-btm-sec {
+.res-container .res-card .card-btm-sec {
   display: flex;
   justify-content: space-between;
   margin: 15px 0;
 }
 
-.res-card .food-img {
+.res-container .res-card .food-img {
   max-width: 100%;
   margin-bottom: 15px;
 }
