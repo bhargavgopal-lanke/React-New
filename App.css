@@ -48,7 +48,8 @@ p {
 .res-container {
     display: flex;
     flex-wrap: wrap;
-    
+    gap: 20px;
+    justify-content: center;
 }
 
 .res-container .res-card:hover {
@@ -58,11 +59,10 @@ p {
 }
 
 .res-container .res-card {
-  width: 27%;
+  flex-basis: 25%;
   border: 1px solid #111;
   border-radius: 10px;
   padding: 30px;
-  margin-right: 15px;
   background-color: #f0f0f0;
   margin-bottom: 20px;
 }
