@@ -6,10 +6,10 @@ const Body = () => {
     <div className="body-sec">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
-        <RestaurentCard />
+        <RestaurentCard name={"Bawarchi"} rating={"4.4"} />
+        <RestaurentCard name={"Meghana Foods"} rating={"4.0"} />
+        <RestaurentCard name={"Mehfil"} rating={"4.1"} />
+        <RestaurentCard name={"Ashoka"} rating={"3.4"} />
       </div>
     </div>
   );
