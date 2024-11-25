@@ -1,5 +1,5 @@
 import React from "react";
-import logoimage from "../public/logo-image.webp";
+import logoimage from "../../public/logo-image.webp";
 
 const Header = () => {
   return (
