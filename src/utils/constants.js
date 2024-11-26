@@ -1,4 +1,4 @@
-export const resObj = {
+export const RES_OBJ = {
     id: "65797",
     name: "Leon's - Burgers & Wings (Leon Grill)",
     cloudinaryImageId: "r4ufflqojich0r29efvc",
