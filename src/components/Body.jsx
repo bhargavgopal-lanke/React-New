@@ -7,10 +7,9 @@ const BodyRes = () => {
     <div className="body-sec">
       <div className="search">Search</div>
       <div className="res-container">
-        <RestaurentCard resData={RES_OBJ} />
-        <RestaurentCard name={"Meghana Foods"} rating={"4.0"} />
-        <RestaurentCard name={"Mehfil"} rating={"4.1"} />
-        <RestaurentCard name={"Ashoka"} rating={"3.4"} />
+        {RES_OBJ.map((data) => {
+          return <RestaurentCard key={data.info.id} resData={data.info} />;
+        })}
       </div>
     </div>
   );
