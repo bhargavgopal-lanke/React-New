@@ -1,29 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import logoimage from "./public/logo-image.webp";
-
-const HeaderComponent = () => {
-  return (
-    <div className="header">
-      <div>
-        <img src={logoimage} alt="" title="logo" width="50px" height="50px" />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+import Header from "./src/components/Header";
+import BodyRes from "./src/components/Body";
 
 const AppLayout = () => {
   return (
     <div className="app">
-      <HeaderComponent />
+      <Header />
+      <BodyRes />
     </div>
   );
 };
