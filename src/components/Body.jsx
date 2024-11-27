@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import RestaurentCard from "./RestaurentCard";
 import { RES_OBJ } from "../utils/constants";
 
 const BodyRes = () => {
+  const [ListOfRatedRes, setListOfRatedRes] = useState(RES_OBJ);
+
   return (
     <div className="body-sec">
       {/* <div className="search">Search</div> */}
       <div className="filter">
         <button
           className="filter-btn"
-          onClick={() => console.log("Button Clicked")}
+          onClick={() => {
+            const listedRestaurents = ListOfRatedRes.filter(
+              (res) => res.info.avgRating > 4
+            );
+            setListOfRatedRes(listedRestaurents);
+          }}
         >
           Top Rated Restaurents
         </button>
       </div>
       <div className="res-container">
-        {RES_OBJ.map((data) => {
+        {ListOfRatedRes.map((data) => {
           return <RestaurentCard key={data.info.id} resData={data.info} />;
         })}
       </div>
