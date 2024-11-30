@@ -8,7 +8,7 @@ const RestaurentCard = ({ resData }) => {
         <img src={IMG_URL + resData?.cloudinaryImageId} className="food-img" />
       </div>
       <h3>{resData?.name}</h3>
-      <h4>{resData?.cuisines}</h4>
+      <h4>{`${resData?.cuisines},`} </h4>
       <div className="card-btm-sec">
         <h4>{resData?.avgRating}</h4>
         <h4>{`${resData?.sla?.deliveryTime} mins`}</h4>
