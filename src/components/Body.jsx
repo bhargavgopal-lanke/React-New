@@ -21,6 +21,10 @@ const BodyRes = () => {
     fetchData();
   }, []);
 
+  // if (ListOfRatedRes.length === 0) {
+  //   return <h1>Loading...</h1>;
+  // }
+
   return (
     <div className="body-sec">
       <div className="filter">
@@ -37,6 +41,7 @@ const BodyRes = () => {
           Top Rated Restaurents
         </button>
       </div>
+      {ListOfRatedRes.length === 0 && <h1>Loading....</h1>}
       <div className="res-container">
         {ListOfRatedRes.map((data) => {
           // v3 api data dstructuring
