@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
-import { SWIGGYAPIV3 } from "../utils/constants";
+import { SWIGGYAPIV3, SWIGGYAPIV4 } from "../utils/constants";
 
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
 
   const fetchData = async () => {
-    const data = await fetch(SWIGGYAPIV3);
+    const data = await fetch(SWIGGYAPIV4);
     const json = await data.json();
-    const cardsList =
-      json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
-    setListOfRatedRes(cardsList);
+
+    // const cardsListV3 =
+    //   json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
+    const cardListV4 =
+      json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards[1]
+        ?.card.card?.restaurants;
+    setListOfRatedRes(cardListV4);
   };
 
   useEffect(() => {
@@ -19,7 +23,6 @@ const BodyRes = () => {
 
   return (
     <div className="body-sec">
-      {/* <div className="search">Search</div> */}
       <div className="filter">
         <button
           className="filter-btn"
@@ -36,9 +39,10 @@ const BodyRes = () => {
       </div>
       <div className="res-container">
         {ListOfRatedRes.map((data) => {
-          let resDataList = data?.card?.card?.info;
-          let resDataListId = data?.card?.card?.info?.id;
-          return <RestaurentCard key={resDataListId} resData={resDataList} />;
+          // v3 api data dstructuring
+          //  let resDataList = data?.card?.card?.info;
+          //  let resDataListId = data?.card?.card?.info?.id;
+          return <RestaurentCard key={data.info.id} resData={data.info} />;
         })}
       </div>
     </div>
