@@ -1,6 +1,9 @@
 export const IMG_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
+export const SWIGGYAPIV3 =
+  "https://www.swiggy.com/dapi/restaurants/search/v3?lat=17.4676641&lng=78.3797928&str=restaurents&trackingId=5bacd105-9412-cfe7-90fd-894fe2d41b0f&submitAction=ENTER&queryUniqueId=654a4313-0a32-2696-6c63-a9534c0279a8";
+
 export const SWIGGYAPI =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4676641&lng=78.3797928&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
 
