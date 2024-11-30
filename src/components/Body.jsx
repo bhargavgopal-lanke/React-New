@@ -25,6 +25,7 @@ const BodyRes = () => {
   //   return <h1>Loading...</h1>;
   // }
 
+
   return (
     <div className="body-sec">
       <div className="filter">
