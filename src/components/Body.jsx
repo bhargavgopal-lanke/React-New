@@ -5,14 +5,15 @@ import { RES_OBJ, SWIGGYAPI } from "../utils/constants";
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState(RES_OBJ);
 
-  useEffect(() => {}, [console.log("UseEffect called43")]);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const fetchData = async () => {
     const data = await fetch(SWIGGYAPI);
     const json = await data.json();
     console.log("data", json);
   };
-  fetchData();
 
   return (
     <div className="body-sec">
