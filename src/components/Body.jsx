@@ -22,9 +22,6 @@ const BodyRes = () => {
     fetchData();
   }, []);
 
-  // if (ListOfRatedRes.length === 0) {
-  //   return <h1>Loading...</h1>;
-  // }
 
   return (
     <div className="body-sec">
@@ -42,6 +39,7 @@ const BodyRes = () => {
           Top Rated Restaurents
         </button>
       </div>
+      {/* rendering on the basis of a condition is known as conditional rendering */}
       {ListOfRatedRes.length === 0 && <Shimmer />}
       <div className="res-container">
         {ListOfRatedRes.map((data) => {
