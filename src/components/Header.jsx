@@ -2,14 +2,10 @@ import React, { useState } from "react";
 import logoimage from "../../public/logo-image.webp";
 
 const Header = () => {
-  const [loginState, setLoginState] = useState(true);
+  const [loginState, setLoginState] = useState("Login");
 
   const handleClick = () => {
-    if (!loginState) {
-      setLoginState(true);
-    } else {
-      setLoginState(false);
-    }
+    loginState === "Login" ? setLoginState("Logout") : setLoginState("Login");
   };
 
   return (
@@ -24,7 +20,9 @@ const Header = () => {
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Cart</li>
-            <li onClick={handleClick} className="login-link">{loginState ? "Login" : "Logout"}</li>
+            <li onClick={handleClick} className="login-link">
+              {loginState}
+            </li>
           </ul>
         </div>
       </div>
