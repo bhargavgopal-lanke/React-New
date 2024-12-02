@@ -25,6 +25,10 @@ const BodyRes = () => {
   return (
     <div className="body-sec">
       <div className="filter">
+        <div className="search">
+          <input type="text" className="search-box form-control" />
+          <button type="button">search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
