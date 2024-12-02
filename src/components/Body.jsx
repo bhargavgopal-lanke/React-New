@@ -22,7 +22,6 @@ const BodyRes = () => {
     fetchData();
   }, []);
 
-
   return (
     <div className="body-sec">
       <div className="filter">
