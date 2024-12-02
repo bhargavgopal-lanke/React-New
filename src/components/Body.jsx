@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
 import { SWIGGYAPIV3, SWIGGYAPIV4 } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
@@ -41,7 +42,7 @@ const BodyRes = () => {
           Top Rated Restaurents
         </button>
       </div>
-      {ListOfRatedRes.length === 0 && <h1>Loading....</h1>}
+      {ListOfRatedRes.length === 0 && <Shimmer />}
       <div className="res-container">
         {ListOfRatedRes.map((data) => {
           // v3 api data dstructuring
