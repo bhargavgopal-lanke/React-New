@@ -4,7 +4,6 @@ import { SWIGGYAPIV3, SWIGGYAPIV4 } from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 const BodyRes = () => {
-  
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
   const [searchInputText, setSearchInputText] = useState("");
 
@@ -24,9 +23,15 @@ const BodyRes = () => {
     fetchData();
   }, []);
 
-  const searchHandler = () => {};
+  const searchHandler = () => {
+    const filteredRestaurents = ListOfRatedRes.filter((res) => {
+      return res.info.name
+        .toLowerCase()
+        .includes(searchInputText.toLowerCase());
+    });
 
-  console.log("searchInputText", searchInputText);
+    setListOfRatedRes(filteredRestaurents);
+  };
 
   return (
     <div className="body-sec">
@@ -39,11 +44,7 @@ const BodyRes = () => {
             onChange={(e) => setSearchInputText(e.target.value)}
           />
           {/* Filter the restuarent cards and update the UI  */}
-          <button
-            type="button"
-            onClick={searchHandler}
-            className="btn btn-secondary"
-          >
+          <button onClick={searchHandler} className="btn btn-secondary">
             search
           </button>
         </div>
