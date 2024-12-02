@@ -63,7 +63,6 @@ p {
 
 .res-container .res-card {
   flex-basis: 25%;
-  border: 1px solid #111;
   border-radius: 10px;
   padding: 30px;
   background-color: #f0f0f0;
@@ -98,11 +97,42 @@ p {
 }
 
 .filter-btn {
-  margin: 30px 0; 
+  margin: 30px 0;
   padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
   cursor: pointer;
   font-weight: bold;
+}
+
+.login-link {
+  cursor: pointer;
+  font-weight: bold;
+  color: #233c3c;
+}
+
+/* Shimmer CSS */
+
+.shimmer-container {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.shimmer-container .shimmer-cards {
+  flex-basis: 25%;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  min-width: 250px;
+  min-height: 487.5px;
+  box-sizing: border-box;
+}
+
+.res-card h4 {
+  word-break: break-all;
+  padding-bottom: 10px;
+  line-height: 20px;
 }
