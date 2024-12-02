@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import logoimage from "../../public/logo-image.webp";
 
 const Header = () => {
+  const [loginState, setLoginState] = useState(true);
+
+  const handleClick = () => {
+    if (!loginState) {
+      setLoginState(true);
+    } else {
+      setLoginState(false);
+    }
+  };
+
   return (
     <div>
       <div className="header">
@@ -14,6 +24,7 @@ const Header = () => {
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Cart</li>
+            <li onClick={handleClick} className="login-link">{loginState ? "Login" : "Logout"}</li>
           </ul>
         </div>
       </div>
