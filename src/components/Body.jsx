@@ -35,9 +35,10 @@ const BodyRes = () => {
           className="filter-btn"
           onClick={() => {
             const listedRestaurents = ListOfRatedRes.filter((res) => {
-              const rating = res?.card?.card?.info.avgRating;
+              const rating = res?.info?.avgRating;
               return rating > 4;
             });
+
             setListOfRatedRes(listedRestaurents);
           }}
         >
