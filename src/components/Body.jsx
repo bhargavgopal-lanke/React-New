@@ -27,7 +27,9 @@ const BodyRes = () => {
       <div className="filter">
         <div className="search">
           <input type="text" className="search-box form-control" />
-          <button type="button">search</button>
+          <button type="button" className="btn btn-secondary">
+            search
+          </button>
         </div>
         <button
           className="filter-btn"
