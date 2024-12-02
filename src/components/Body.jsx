@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
+  const [filteredRestaurents, setFilteredRestaurents] = useState([]);
   const [searchInputText, setSearchInputText] = useState("");
 
   const fetchData = async () => {
@@ -17,6 +18,7 @@ const BodyRes = () => {
       json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards[1]
         ?.card.card?.restaurants;
     setListOfRatedRes(cardListV4);
+    setFilteredRestaurents(cardListV4);
   };
 
   useEffect(() => {
@@ -24,13 +26,13 @@ const BodyRes = () => {
   }, []);
 
   const searchHandler = () => {
-    const filteredRestaurents = ListOfRatedRes.filter((res) => {
+    const filteredRestaurentsList = ListOfRatedRes.filter((res) => {
       return res.info.name
         .toLowerCase()
         .includes(searchInputText.toLowerCase());
     });
 
-    setListOfRatedRes(filteredRestaurents);
+    setFilteredRestaurents(filteredRestaurentsList);
   };
 
   return (
@@ -65,7 +67,7 @@ const BodyRes = () => {
       {/* rendering on the basis of a condition is known as conditional rendering */}
       {ListOfRatedRes.length === 0 && <Shimmer />}
       <div className="res-container">
-        {ListOfRatedRes.map((data) => {
+        {filteredRestaurents.map((data) => {
           // v3 api data dstructuring
           //  let resDataList = data?.card?.card?.info;
           //  let resDataListId = data?.card?.card?.info?.id;
