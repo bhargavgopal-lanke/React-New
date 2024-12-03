@@ -11,7 +11,7 @@ const BodyRes = () => {
   const fetchData = async () => {
     const data = await fetch(SWIGGYAPIV4);
     const json = await data.json();
-
+    // Extracting the list of cards from the data.
     // const cardsListV3 =
     //   json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
     const cardListV4 =
