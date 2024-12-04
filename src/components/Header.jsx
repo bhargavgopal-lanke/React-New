@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logoimage from "../../public/logo-image.webp";
+import { NavLink } from "react-router";
 
 const Header = () => {
   const [loginState, setLoginState] = useState("Login");
@@ -16,8 +17,16 @@ const Header = () => {
         </div>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
+            <li>
+              <NavLink to="/" end className="link">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" end className="link">
+                About Us
+              </NavLink>
+            </li>
             <li>Contact Us</li>
             <li>Cart</li>
             <li onClick={handleClick} className="login-link">
