@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import BodyRes from "./src/components/Body";
-
+import { BrowserRouter, Route, Routes } from "react-router";
+import About from "./src/components/HeaderSubRoutes/About";
 
 const AppLayout = () => {
   return (
@@ -15,4 +16,11 @@ const AppLayout = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
+root.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<AppLayout />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  </BrowserRouter>
+);
