@@ -26,8 +26,8 @@ p {
 }
 
 .body-sec {
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 40px auto 0;
 }
 
 .nav-items ul li {
@@ -97,7 +97,6 @@ p {
 }
 
 .filter-btn {
-  margin: 30px 0;
   padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -137,6 +136,10 @@ p {
   line-height: 20px;
 }
 
+.filter {
+  margin-bottom: 40px;
+}
+
 .filter,
 .search {
   display: flex;
@@ -146,7 +149,6 @@ p {
 }
 
 .form-control {
-  margin: 30px 0;
   padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -175,4 +177,9 @@ p {
   border-color: #6c757d;
   min-width: 300px;
   height: 48px;
+}
+
+li a.link {
+  text-decoration: none;
+  color: #111;
 }
