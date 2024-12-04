@@ -27,8 +27,16 @@ const Header = () => {
                 About Us
               </NavLink>
             </li>
-            <li>Contact Us</li>
-            <li>Cart</li>
+            <li>
+              <NavLink to="/contact" end className="link">
+                Contact Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/cart" end className="link">
+                Cart
+              </NavLink>
+            </li>
             <li onClick={handleClick} className="login-link">
               {loginState}
             </li>
