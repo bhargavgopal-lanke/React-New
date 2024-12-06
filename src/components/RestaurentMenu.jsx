@@ -21,7 +21,14 @@ const RestaurentMenu = () => {
     menuData?.cards.length > 2 &&
     menuData?.cards[2]?.card?.card?.info;
 
+  const menuListItems =
+    menuData?.cards &&
+    menuData?.cards.length > 3 &&
+    menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
+
+  console.log("restaurantMenu", menuListItems);
 
   return (
     <div className="menu">
@@ -29,8 +36,10 @@ const RestaurentMenu = () => {
       <>
         <div>
           <h1>{name}</h1>
-          <h2>{cuisines.join(", ")}</h2>
-          <h3>{costForTwoMessage}</h3>
+          <h2>
+            {cuisines ? cuisines.join(", ") : ""} - {costForTwoMessage}
+          </h2>
+          <h3>Menu</h3>
         </div>
       </>
     </div>
