@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import About from "./src/components/HeaderSubRoutes/About";
 import Contact from "./src/components/HeaderSubRoutes/Contact";
 import Cart from "./src/components/HeaderSubRoutes/Cart";
+import RestaurentMenu from "./src/components/RestaurentMenu";
 
 const AppLayout = () => {
   return (
@@ -25,6 +26,7 @@ root.render(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/restuarent" element={<RestaurentMenu />} />
     </Routes>
   </BrowserRouter>
 );
