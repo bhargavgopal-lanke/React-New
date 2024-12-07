@@ -38,6 +38,7 @@ const RestaurentMenu = () => {
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
 
+
   return (
     <div className="menu">
       <Header />
