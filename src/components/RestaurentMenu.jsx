@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { MENUAPI } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { useParams } from "react-router";
+import Header from "./Header";
 
 const RestaurentMenu = () => {
   const [menuData, setMenuData] = useState(null);
+
+  const { resId } = useParams();
 
   // if I dont add the dependency array useffect will be called everytime a component renders.
   useEffect(() => {
@@ -11,7 +15,7 @@ const RestaurentMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const menuApiData = await fetch(MENUAPI);
+    const menuApiData = await fetch(MENUAPI + resId);
     const jsonData = await menuApiData.json();
     setMenuData(jsonData.data);
   };
@@ -37,9 +41,10 @@ const RestaurentMenu = () => {
 
   return (
     <div className="menu">
+      <Header />
       {menuData === null && <Shimmer />}
       <>
-        <div>
+        <div className="rest-menu">
           <h1>{name}</h1>
           <h2>
             {cuisines ? cuisines.join(", ") : ""} - {costForTwoMessage}
@@ -47,9 +52,18 @@ const RestaurentMenu = () => {
           <h3>Menu</h3>
           <ul>
             {menuListItemsCard &&
-              menuListItemsCard.map((item) => (
-                <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>
-              ))}
+              menuListItemsCard.map((item) => {
+                const { price, defaultPrice } = item?.card?.info || "";
+                const displayPrice =
+                  (price && parseFloat(price / 100)) ||
+                  (defaultPrice && parseFloat(defaultPrice / 100)) ||
+                  "";
+                return (
+                  <li key={item?.card?.info?.id}>
+                    {item?.card?.info?.name} - {"Rs."} {displayPrice}
+                  </li>
+                );
+              })}
           </ul>
         </div>
       </>

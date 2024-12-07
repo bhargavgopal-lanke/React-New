@@ -2,7 +2,8 @@ export const IMG_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 export const MENUAPI =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.4676641&lng=78.3797928&restaurantId=10492&catalog_qa=undefined&submitAction=ENTER";
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.4676641&lng=78.3797928&restaurantId=";
+
 
 export const SWIGGYAPIV4 =
   "https://www.swiggy.com/dapi/restaurants/search/v3?lat=17.4676641&lng=78.3797928&str=Biryani&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=9c6c9674-e20d-1b4e-9b69-e93795e7bd90&metaData=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A46393%2C%22primaryRestaurantId%22%3A644847%2C%22cloudinaryId%22%3A%22be4ecc0cb447e648a267cca9654bc079%22%2C%22brandId%22%3A46393%2C%22dishFamilyId%22%3A%22846613%22%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D";

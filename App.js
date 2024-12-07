@@ -26,7 +26,7 @@ root.render(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
-      <Route path="/restuarent" element={<RestaurentMenu />} />
+      <Route path="/restuarent/:resId" element={<RestaurentMenu />} />
     </Routes>
   </BrowserRouter>
 );
