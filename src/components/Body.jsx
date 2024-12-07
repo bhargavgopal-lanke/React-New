@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
 import { SWIGGYAPIV3, SWIGGYAPIV4 } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router";
 
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
@@ -71,7 +72,11 @@ const BodyRes = () => {
           // v3 api data dstructuring
           //  let resDataList = data?.card?.card?.info;
           //  let resDataListId = data?.card?.card?.info?.id;
-          return <RestaurentCard key={data.info.id} resData={data.info} />;
+          return (
+            <Link to={`/restuarent/${data.info.id}`} className="res-card-link">
+              <RestaurentCard key={data.info.id} resData={data.info} />
+            </Link>
+          );
         })}
       </div>
     </div>
