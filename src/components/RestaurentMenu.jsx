@@ -3,7 +3,7 @@ import { MENUAPI } from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 const RestaurentMenu = () => {
-  const [menuData, setMenuData] = useState([]);
+  const [menuData, setMenuData] = useState(null);
 
   // if I dont add the dependency array useffect will be called everytime a component renders.
   useEffect(() => {
@@ -23,12 +23,17 @@ const RestaurentMenu = () => {
 
   const menuListItems =
     menuData?.cards &&
-    menuData?.cards.length > 3 &&
+    menuData?.cards.length >= 4 &&
     menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
+  const menuListItemsCard =
+    (menuListItems &&
+      menuListItems.length > 2 &&
+      menuListItems[2]?.card?.card?.itemCards) ||
+    "";
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
 
-  console.log("restaurantMenu", menuListItems);
 
   return (
     <div className="menu">
@@ -40,6 +45,12 @@ const RestaurentMenu = () => {
             {cuisines ? cuisines.join(", ") : ""} - {costForTwoMessage}
           </h2>
           <h3>Menu</h3>
+          <ul>
+            {menuListItemsCard &&
+              menuListItemsCard.map((item) => (
+                <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>
+              ))}
+          </ul>
         </div>
       </>
     </div>
