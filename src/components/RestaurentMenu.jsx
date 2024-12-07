@@ -34,8 +34,6 @@ const RestaurentMenu = () => {
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
 
-
-
   return (
     <div className="menu">
       {menuData === null && <Shimmer />}
@@ -51,12 +49,12 @@ const RestaurentMenu = () => {
               menuListItemsCard.map((item) => {
                 const { price, defaultPrice } = item?.card?.info || "";
                 const displayPrice =
-                  (price && parseFloat(price / 100).toFixed(2)) ||
-                  (defaultPrice && parseFloat(defaultPrice / 100).toFixed(2)) ||
+                  (price && parseFloat(price / 100)) ||
+                  (defaultPrice && parseFloat(defaultPrice / 100)) ||
                   "";
                 return (
                   <li key={item?.card?.info?.id}>
-                    {item?.card?.info?.name} - {displayPrice}
+                    {item?.card?.info?.name} - {"Rs."} {displayPrice}
                   </li>
                 );
               })}
