@@ -183,3 +183,12 @@ li a.link {
   text-decoration: none;
   color: #111;
 }
+
+.rest-menu {
+  margin: 40px;
+}
+
+.res-container .res-card-link {
+  text-decoration: none;
+  color: #111;
+}
