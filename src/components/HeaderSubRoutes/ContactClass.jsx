@@ -1,7 +1,7 @@
-import React from "react";
+import { Component } from "react";
 import UseClass from "./AboutClass";
 
-class ContactComponent extends React.Component {
+class ContactComponent extends Component {
   constructor() {
     super();
   }
