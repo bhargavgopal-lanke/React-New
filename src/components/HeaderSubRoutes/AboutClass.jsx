@@ -1,6 +1,6 @@
-import React from "react";
+import { Component } from "react";
 
-class UseClass extends React.Component {
+class UseClass extends Component {
   constructor(props) {
     super(props);
 
