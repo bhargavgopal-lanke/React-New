@@ -11,6 +11,7 @@ const RestaurentCard = ({ resData }) => {
       <h4>{resData?.cuisines.join(", ")}</h4>
       <div className="card-btm-sec">
         <h4>{resData?.avgRating}</h4>
+        <h4>{resData?.costForTwo}</h4>
         <h4>{`${resData?.sla?.deliveryTime} mins`}</h4>
       </div>
     </div>
