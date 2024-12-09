@@ -10,7 +10,6 @@ import RestaurentMenu from "./src/components/RestaurentMenu";
 import UseClass from "./src/components/HeaderSubRoutes/AboutClass";
 import ContactComponent from "./src/components/HeaderSubRoutes/ContactClass";
 
-
 const AppLayout = () => {
   return (
     <div className="app">
