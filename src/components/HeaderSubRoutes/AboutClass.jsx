@@ -20,7 +20,6 @@ class UseClass extends Component {
 
   render() {
     const { apiData } = this.state;
-    console.log("key :", Object.entries(apiData));
     return (
       <>
         <h1 style={{marginBottom: "25px"}}>This is an about page.</h1>
