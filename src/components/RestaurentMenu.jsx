@@ -1,26 +1,18 @@
 import React from "react";
 import Shimmer from "./Shimmer";
 import Header from "./Header";
-import { useRestaurentMenu } from "../Helper/utilityFunctions";
+import {
+  menuListFunction,
+  useRestaurentMenu,
+} from "../Helper/utilityFunctions";
 
 const RestaurentMenu = () => {
   const menuData = useRestaurentMenu();
 
-  const restaurantMenu =
-    menuData?.cards &&
-    menuData?.cards.length > 2 &&
-    menuData?.cards[2]?.card?.card?.info;
-
-  const menuListItems =
-    menuData?.cards &&
-    menuData?.cards.length >= 4 &&
-    menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-
-  const menuListItemsCard =
-    (menuListItems &&
-      menuListItems.length > 2 &&
-      menuListItems[2]?.card?.card?.itemCards) ||
-    "";
+  const {
+    restaurantMenu,
+    menuListItemsCard,
+  } = menuListFunction(menuData);
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
 
