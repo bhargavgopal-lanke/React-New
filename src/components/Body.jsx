@@ -68,12 +68,16 @@ const BodyRes = () => {
       {/* rendering on the basis of a condition is known as conditional rendering */}
       {ListOfRatedRes.length === 0 && <Shimmer />}
       <div className="res-container">
-        {filteredRestaurents.map((data) => {
+        {filteredRestaurents.map((data, index) => {
           // v3 api data dstructuring
           //  let resDataList = data?.card?.card?.info;
           //  let resDataListId = data?.card?.card?.info?.id;
           return (
-            <Link to={`/restuarent/${data.info.id}`} className="res-card-link">
+            <Link
+              key={index}
+              to={`/restuarent/${data.info.id}`}
+              className="res-card-link"
+            >
               <RestaurentCard key={data.info.id} resData={data.info} />
             </Link>
           );
