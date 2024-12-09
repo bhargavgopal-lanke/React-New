@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { MENUAPI } from "../utils/constants";
+import React from "react";
 import Shimmer from "./Shimmer";
-import { useParams } from "react-router";
 import Header from "./Header";
+import { useRestaurentMenu } from "../Helper/utilityFunctions";
 
 const RestaurentMenu = () => {
-  const [menuData, setMenuData] = useState(null);
-
-  const { resId } = useParams();
-
-  // if I dont add the dependency array useffect will be called everytime a component renders.
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    const menuApiData = await fetch(MENUAPI + resId);
-    const jsonData = await menuApiData.json();
-    setMenuData(jsonData.data);
-  };
+  const menuData = useRestaurentMenu();
 
   const restaurantMenu =
     menuData?.cards &&
@@ -37,7 +23,6 @@ const RestaurentMenu = () => {
     "";
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
-
 
   return (
     <div className="menu">
