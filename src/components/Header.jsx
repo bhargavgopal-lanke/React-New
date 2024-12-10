@@ -22,9 +22,12 @@ const Header = () => {
             <li>
               <strong>Online Status:</strong>
               {showOnline === true ? (
-                <span className="green"></span>
+                <>{/* // <span className="green"></span> */}🟢</>
               ) : (
-                <span className="red"></span>
+                <>
+                  {/* // <span className="red"></span> */}
+                  🔴
+                </>
               )}
             </li>
             <li>
