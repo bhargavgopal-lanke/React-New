@@ -199,6 +199,7 @@ span.green {
   border-radius: 25px;
   width: 10px;
   height: 10px;
+  margin-left: 10px;
 }
 
 span.red {
@@ -207,4 +208,5 @@ span.red {
   border-radius: 25px;
   width: 10px;
   height: 10px;
+  margin-left: 10px;
 }
