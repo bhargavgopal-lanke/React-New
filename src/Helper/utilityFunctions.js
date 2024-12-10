@@ -16,30 +16,10 @@ export const useRestaurentMenu = () => {
   const fetchMenu = async () => {
     const menuApiData = await fetch(MENUAPI + resId);
     const jsonData = await menuApiData.json();
-    const data = await fetch(SWIGGYAPIV4);
-    const json = await data.json();
-    // Extracting the list of cards from the data.
-    // const cardsListV3 =
-    //   json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
-    const cardListV4 =
-      json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards[1]
-        ?.card.card?.restaurants;
-    setListOfRatedRes(cardListV4);
-    setFilteredRestaurents(cardListV4);
     setMenuData(jsonData.data);
   };
 
-  const searchHandler = () => {
-    const filteredRestaurentsList = ListOfRatedRes.filter((res) => {
-      return res.info.name
-        .toLowerCase()
-        .includes(searchInputText.toLowerCase());
-    });
-  
-    setFilteredRestaurents(filteredRestaurentsList);
-  };
-  
-  return { menuData, ListOfRatedRes, filteredRestaurents };
+  return { menuData };
 };
 
 // Menu List items function
@@ -64,6 +44,3 @@ export const menuListFunction = (menuData) => {
     menuListItemsCard,
   };
 };
-
-
-
