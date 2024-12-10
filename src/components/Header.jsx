@@ -20,6 +20,7 @@ const Header = () => {
         <div className="nav-items">
           <ul>
             <li>
+              <strong>Online Status:</strong>
               {showOnline === true ? (
                 <span className="green"></span>
               ) : (
