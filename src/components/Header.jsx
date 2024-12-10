@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logoimage from "../../public/logo-image.webp";
 import { NavLink } from "react-router";
+import useOnlineStatus from "../Helper/useOnlineStatus";
 
 const Header = () => {
   const [loginState, setLoginState] = useState("Login");
@@ -8,6 +9,7 @@ const Header = () => {
   const handleClick = () => {
     loginState === "Login" ? setLoginState("Logout") : setLoginState("Login");
   };
+  const showOnline = useOnlineStatus();
 
   return (
     <div>
@@ -17,6 +19,13 @@ const Header = () => {
         </div>
         <div className="nav-items">
           <ul>
+            <li>
+              {showOnline === true ? (
+                <span className="green"></span>
+              ) : (
+                <span className="red"></span>
+              )}
+            </li>
             <li>
               <NavLink to="/" end className="link">
                 Home
