@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import BodyRes from "./src/components/Body";
@@ -21,6 +21,8 @@ const AppLayout = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const Grocery = lazy(() => import("./src/components/Grocery"));
+
 root.render(
   <BrowserRouter>
     <Routes>
@@ -29,6 +31,14 @@ root.render(
       <Route path="/contact" element={<ContactComponent />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/restuarent/:resId" element={<RestaurentMenu />} />
+      <Route
+        path="/grocery"
+        element={
+          <Suspense>
+            <Grocery />
+          </Suspense>
+        }
+      />
     </Routes>
   </BrowserRouter>
 );
