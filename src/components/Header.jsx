@@ -50,6 +50,11 @@ const Header = () => {
                 Cart
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/grocery" end className="link">
+                Grocery
+              </NavLink>
+            </li>
             <li onClick={handleClick} className="login-link">
               {loginState}
             </li>
