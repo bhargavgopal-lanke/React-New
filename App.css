@@ -193,3 +193,18 @@ li a.link {
   color: #111;
 }
 
+span.green {
+  background: green;
+  display: inline-block;
+  border-radius: 25px;
+  width: 10px;
+  height: 10px;
+}
+
+span.red {
+  background: red;
+  display: inline-block;
+  border-radius: 25px;
+  width: 10px;
+  height: 10px;
+}
