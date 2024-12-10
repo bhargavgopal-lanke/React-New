@@ -7,12 +7,9 @@ import {
 } from "../Helper/utilityFunctions";
 
 const RestaurentMenu = () => {
-  const menuData = useRestaurentMenu();
+  const { menuData } = useRestaurentMenu();
 
-  const {
-    restaurantMenu,
-    menuListItemsCard,
-  } = menuListFunction(menuData);
+  const { restaurantMenu, menuListItemsCard } = menuListFunction(menuData);
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
 

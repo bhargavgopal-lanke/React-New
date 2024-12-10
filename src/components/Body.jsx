@@ -1,40 +1,15 @@
 import React, { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
-import { SWIGGYAPIV3, SWIGGYAPIV4 } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
+import { useRestaurentMenu } from "../Helper/utilityFunctions";
 
 const BodyRes = () => {
-  const [ListOfRatedRes, setListOfRatedRes] = useState([]);
-  const [filteredRestaurents, setFilteredRestaurents] = useState([]);
   const [searchInputText, setSearchInputText] = useState("");
 
-  const fetchData = async () => {
-    const data = await fetch(SWIGGYAPIV4);
-    const json = await data.json();
-    // Extracting the list of cards from the data.
-    // const cardsListV3 =
-    //   json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
-    const cardListV4 =
-      json?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards[1]
-        ?.card.card?.restaurants;
-    setListOfRatedRes(cardListV4);
-    setFilteredRestaurents(cardListV4);
-  };
+  const { ListOfRatedRes, filteredRestaurents } = useRestaurentMenu();
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
-  const searchHandler = () => {
-    const filteredRestaurentsList = ListOfRatedRes.filter((res) => {
-      return res.info.name
-        .toLowerCase()
-        .includes(searchInputText.toLowerCase());
-    });
-
-    setFilteredRestaurents(filteredRestaurentsList);
-  };
 
   return (
     <div className="body-sec">
