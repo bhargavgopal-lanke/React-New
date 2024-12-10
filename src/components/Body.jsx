@@ -2,14 +2,43 @@ import React, { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
-import { useRestaurentMenu } from "../Helper/utilityFunctions";
+import useOnlineStatus from "../Helper/useOnlineStatus";
+import { SWIGGYAPIV4 } from "../utils/constants";
 
 const BodyRes = () => {
+  const [ListOfRatedRes, setListOfRatedRes] = useState([]);
+  const [filteredRestaurents, setFilteredRestaurents] = useState([]);
   const [searchInputText, setSearchInputText] = useState("");
 
-  const { ListOfRatedRes, filteredRestaurents } = useRestaurentMenu();
+  useEffect(() => {
+    restuarentCardsData();
+  }, []);
 
+  const restuarentCardsData = async () => {
+    const fetchData = await fetch(SWIGGYAPIV4);
+    const jsonData = await fetchData.json();
+    const cardListV4 =
+      jsonData?.data?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards[1]
+        ?.card.card?.restaurants;
+    setListOfRatedRes(cardListV4);
+    setFilteredRestaurents(cardListV4);
+  };
 
+  const searchHandler = () => {
+    const filteredRestaurentsList = ListOfRatedRes.filter((res) => {
+      return res.info.name
+        .toLowerCase()
+        .includes(searchInputText.toLowerCase());
+    });
+  
+    setFilteredRestaurents(filteredRestaurentsList);
+  };
+  
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return <h1>You're offline. Please check your internet connection.</h1>;
 
   return (
     <div className="body-sec">
