@@ -71,7 +71,7 @@ const BodyRes = () => {
       </div>
       {/* rendering on the basis of a condition is known as conditional rendering */}
       {ListOfRatedRes.length === 0 && <Shimmer />}
-      <div className="res-container">
+      <div className="flex justify-between flex-wrap">
         {filteredRestaurents.map((data, index) => {
           // v3 api data dstructuring
           //  let resDataList = data?.card?.card?.info;
@@ -80,7 +80,7 @@ const BodyRes = () => {
             <Link
               key={index}
               to={`/restuarent/${data.info.id}`}
-              className="res-card-link"
+              className="res-card-link flex-1"
             >
               <RestaurentCard key={data.info.id} resData={data.info} />
             </Link>

@@ -15,7 +15,7 @@ const Header = () => {
     <div>
       <div className="header">
         <div className="logo">
-          <img src={logoimage} alt="" title="logo" />
+          <img src={logoimage} className="w-48" alt="" title="logo" />
         </div>
         <div className="nav-items">
           <ul>
