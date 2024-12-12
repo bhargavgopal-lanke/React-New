@@ -47,9 +47,27 @@ export const menuListFunction = (menuData) => {
     );
 
   console.log("categories", categories);
-  
+
   return {
     restaurantMenu,
     menuListItemsCard,
   };
+};
+
+export const renderMenuFewerListItems = (menuListItemsCard) => {
+  let testData =
+    menuListItemsCard &&
+    menuListItemsCard.map((item) => {
+      const { price, defaultPrice } = item?.card?.info || "";
+      const displayPrice =
+        (price && parseFloat(price / 100)) ||
+        (defaultPrice && parseFloat(defaultPrice / 100)) ||
+        "";
+      return (
+        <li key={item?.card?.info?.id}>
+          {item?.card?.info?.name} - {"Rs."} {displayPrice}
+        </li>
+      );
+    });
+  return testData;
 };
