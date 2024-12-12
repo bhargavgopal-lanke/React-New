@@ -27,6 +27,7 @@ export const menuListFunction = (menuData) => {
     menuData?.cards.length > 2 &&
     menuData?.cards[2]?.card?.card?.info;
 
+  // this variable is having all the menu list items (all categories)
   const menuListItems =
     menuData?.cards &&
     menuData?.cards.length >= 4 &&
@@ -38,6 +39,9 @@ export const menuListFunction = (menuData) => {
       menuListItems[2]?.card?.card?.itemCards) ||
     "";
 
+  // Basically from all the menu list items we're filtering out items based on the type
+  // this type is common for all catogories of food like veg and non veg and all items are having same type
+  // using this type we're fltering out the menu list items and looping through them and rendering them on UI.
   const categories =
     menuListItems &&
     menuListItems.filter(
@@ -46,14 +50,14 @@ export const menuListFunction = (menuData) => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log("categories", categories);
-
   return {
     restaurantMenu,
     menuListItemsCard,
+    categories,
   };
 };
 
+// older version of code to render menu list items
 export const renderMenuFewerListItems = (menuListItemsCard) => {
   let testData =
     menuListItemsCard &&
