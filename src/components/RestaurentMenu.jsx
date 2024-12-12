@@ -6,11 +6,14 @@ import {
   renderMenuFewerListItems,
   useRestaurentMenu,
 } from "../Helper/utilityFunctions";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurentMenu = () => {
   const { menuData } = useRestaurentMenu();
 
-  const { restaurantMenu, menuListItemsCard } = menuListFunction(menuData);
+  const { restaurantMenu, categories, menuListItemsCard } = menuListFunction(
+    menuData
+  );
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
 
@@ -26,8 +29,12 @@ const RestaurentMenu = () => {
           <h2 className="font-bold text-lg">
             {cuisines ? cuisines.join(", ") : ""} - {costForTwoMessage}
           </h2>
-          <h3>Menu</h3>
-          
+          <h3 className="font-bold my-10 text-2xl underline">Menu</h3>
+
+          {categories &&
+            categories.map((list) => {
+              return <RestaurantCategory categoryList={list.card.card} />;
+            })}
         </div>
       </>
     </div>
