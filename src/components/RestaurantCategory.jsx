@@ -8,15 +8,18 @@ const RestaurantCategory = ({ categoryList }) => {
       <h1 className="font-bold my-3 text-2xl">{title}</h1>
       <ul className="mb-10">
         {itemCards.map((items) => {
-          const { id, name, price, category, description } = items?.card?.info;
+          const { id, name, price, defaultPrice, category, description } = items?.card?.info;
+          
           return (
             <>
-              <li key={id} className="text-lg">
+              <li key={id} className="text-lg name">
                 {name}
               </li>
-              <li className="text-lg">{price}</li>
-              <li className="text-lg">{category}</li>
-              <li className="text-lg">{description}</li>
+              <li className="text-lg">
+                <strong>Rs -</strong> {(price || defaultPrice) / 100}
+              </li>
+              <li className="text-lg"> {category}</li>
+              <li className="text-lg"> {description}</li>
             </>
           );
         })}
