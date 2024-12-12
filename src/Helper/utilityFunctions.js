@@ -37,6 +37,17 @@ export const menuListFunction = (menuData) => {
       menuListItems.length > 2 &&
       menuListItems[2]?.card?.card?.itemCards) ||
     "";
+
+  const categories =
+    menuListItems &&
+    menuListItems.filter(
+      (cards) =>
+        cards?.card?.card["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+
+  console.log("categories", categories);
+  
   return {
     restaurantMenu,
     menuListItemsCard,
