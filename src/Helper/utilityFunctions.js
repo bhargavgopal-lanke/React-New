@@ -5,8 +5,6 @@ import { useParams } from "react-router";
 // Fecthing data from SWIGGY API restaurent menu
 export const useRestaurentMenu = () => {
   const [menuData, setMenuData] = useState(null);
-  const [ListOfRatedRes, setListOfRatedRes] = useState([]);
-  const [filteredRestaurents, setFilteredRestaurents] = useState([]);
   const { resId } = useParams();
   // if I dont add the dependency array useffect will be called everytime a component renders.
   useEffect(() => {
