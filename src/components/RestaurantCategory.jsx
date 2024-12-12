@@ -4,12 +4,20 @@ const RestaurantCategory = ({ categoryList }) => {
   const { title, itemCards } = categoryList;
 
   return (
-    <div className="">
-      <h1 className="font-bold my-3 text-2xl">{title}</h1>
-      <ul className="mb-10">
+    <div className="w-6/12 mx-auto mb-10 bg-gray-50 py-2 px-3 shadow-lg flex justify-between items-center">
+      <span className="font-bold my-3 text-xl">{title} </span>
+      <span>⬇️</span>
+      {/* <ul className="">
         {itemCards.map((items) => {
-          const { id, name, price, defaultPrice, category, description } = items?.card?.info;
-          
+          const {
+            id,
+            name,
+            price,
+            defaultPrice,
+            category,
+            description,
+          } = items?.card?.info;
+
           return (
             <>
               <li key={id} className="text-lg name">
@@ -18,12 +26,11 @@ const RestaurantCategory = ({ categoryList }) => {
               <li className="text-lg">
                 <strong>Rs -</strong> {(price || defaultPrice) / 100}
               </li>
-              <li className="text-lg"> {category}</li>
               <li className="text-lg"> {description}</li>
             </>
           );
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 };
