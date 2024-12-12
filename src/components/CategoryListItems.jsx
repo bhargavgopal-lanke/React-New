@@ -1,32 +1,34 @@
 import React from "react";
+import { MENUITEMS_IMGURL } from "../utils/constants";
 
 const CategoryListItems = ({ data }) => {
   return (
     <div>
-      <ul className="">
-        {data.map((items) => {
-          const {
-            id,
-            name,
-            price,
-            defaultPrice,
-            category,
-            description,
-          } = items?.card?.info;
+      {data.map((items) => {
+        const {
+          id,
+          name,
+          imageId,
+          price,
+          defaultPrice,
+          description,
+        } = items?.card?.info;
 
-          return (
-            <>
-              <li key={id} className="text-lg name">
-                {name}
-              </li>
-              <li className="text-lg">
-                <strong>Rs -</strong> {(price || defaultPrice) / 100}
-              </li>
-              <li className="text-lg"> {description}</li>
-            </>
-          );
-        })}
-      </ul>
+        console.log("imageId", imageId);
+
+        return (
+          <div className="m-2 p-2 border-b-4">
+            <div key={id} className="text-lg mb-2">
+              <span className="inline-block mr-3">{name}</span>
+              <span>
+                <strong>₹ </strong> {(price || defaultPrice) / 100}
+              </span>
+            </div>
+            <img src={MENUITEMS_IMGURL + imageId} />
+            <p className="text-md"> {description}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
