@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 import Header from "./Header";
 import {
   menuListFunction,
+  renderMenuFewerListItems,
   useRestaurentMenu,
 } from "../Helper/utilityFunctions";
 
@@ -12,6 +13,8 @@ const RestaurentMenu = () => {
   const { restaurantMenu, menuListItemsCard } = menuListFunction(menuData);
 
   const { name, cuisines, costForTwoMessage } = restaurantMenu || "";
+
+  // const renderFewListItems = renderMenuFewerListItems(menuListItemsCard);
 
   return (
     <div className="menu">
@@ -24,21 +27,7 @@ const RestaurentMenu = () => {
             {cuisines ? cuisines.join(", ") : ""} - {costForTwoMessage}
           </h2>
           <h3>Menu</h3>
-          <ul>
-            {menuListItemsCard &&
-              menuListItemsCard.map((item) => {
-                const { price, defaultPrice } = item?.card?.info || "";
-                const displayPrice =
-                  (price && parseFloat(price / 100)) ||
-                  (defaultPrice && parseFloat(defaultPrice / 100)) ||
-                  "";
-                return (
-                  <li key={item?.card?.info?.id}>
-                    {item?.card?.info?.name} - {"Rs."} {displayPrice}
-                  </li>
-                );
-              })}
-          </ul>
+          
         </div>
       </>
     </div>
