@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import CategoryListItems from "./CategoryListItems";
 
 const RestaurantCategory = ({ categoryList }) => {
+  const [categoryDisplay, setCategoryDisplay] = useState(true);
   const { title, itemCards } = categoryList;
 
   return (
@@ -11,9 +12,16 @@ const RestaurantCategory = ({ categoryList }) => {
           <span className="font-bold my-3 text-xl">
             {title} ({itemCards.length})
           </span>
-          <span>⬇️</span>
+          <span
+            className="cursor-pointer"
+            onClick={() => setCategoryDisplay(!categoryDisplay)}
+          >
+            ⬇️
+          </span>
         </div>
-        <div>{<CategoryListItems data={itemCards} />}</div>
+        <div>
+          {categoryDisplay ? <CategoryListItems data={itemCards} /> : ""}
+        </div>
       </div>
     </>
   );
