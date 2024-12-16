@@ -28,11 +28,13 @@ const CategoryListItems = ({ data }) => {
               </div>
               <p className="text-md"> {description}</p>
             </div>
-            <div className="w-3/12">
+            <div className="w-4/12 relative">
+              <div className="absolute">
+                <button className="p-2 mx-16 rounded-lg bg-black text-white shawdow-lg">
+                  Add +
+                </button>
+              </div>
               <img src={MENUITEMS_IMGURL + imageId} className="w-full" />
-              <button className="p-2 bg-white shawdow-lg ">
-                Add +
-              </button>
             </div>
           </div>
         );
