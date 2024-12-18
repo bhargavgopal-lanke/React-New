@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Shimmer from "./Shimmer";
 import Header from "./Header";
 import {
@@ -10,6 +10,7 @@ import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurentMenu = () => {
   const { menuData } = useRestaurentMenu();
+  const [showIndex, setShowIndex] = useState(1);
 
   const { restaurantMenu, categories, menuListItemsCard } = menuListFunction(
     menuData
@@ -32,8 +33,15 @@ const RestaurentMenu = () => {
           <h3 className="font-bold my-10 text-2xl underline">Menu</h3>
 
           {categories &&
-            categories.map((list) => {
-              return <RestaurantCategory categoryList={list.card.card} />;
+            categories.map((list, index) => {
+              return (
+                <RestaurantCategory
+                  key={list?.card?.card?.title}
+                  categoryList={list?.card?.card}
+                  showItems={index === showIndex ? true : false}
+                  setShowIndex={() => setShowIndex(index)}
+                />
+              );
             })}
         </div>
       </>
