@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import BodyRes from "./src/components/Body";
@@ -9,12 +9,24 @@ import Cart from "./src/components/HeaderSubRoutes/Cart";
 import RestaurentMenu from "./src/components/RestaurentMenu";
 import UseClass from "./src/components/HeaderSubRoutes/AboutClass";
 import ContactComponent from "./src/components/HeaderSubRoutes/ContactClass";
+import userContext from "./src/utils/UseContext";
 
 const AppLayout = () => {
+  const [userName, setuserName] = useState();
+  // make an APi call to get the user data
+  useEffect(() => {
+    const data = {
+      name: "Bhargav Gopal",
+    };
+    setuserName(data.name);
+  }, []);
+
   return (
     <div className="app">
-      <Header />
-      <BodyRes />
+      <userContext.Provider value={{ loggedinUser: userName }}>
+        <Header />
+        <BodyRes />
+      </userContext.Provider>
     </div>
   );
 };

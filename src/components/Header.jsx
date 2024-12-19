@@ -8,6 +8,7 @@ const Header = () => {
   const [loginState, setLoginState] = useState("Login");
 
   const { loggedinUser } = useContext(userContext);
+  
 
   const handleClick = () => {
     loginState === "Login" ? setLoginState("Logout") : setLoginState("Login");
@@ -64,6 +65,7 @@ const Header = () => {
             <li onClick={handleClick} className="login-link">
               {loginState}
             </li>
+            <li className="login-link">{loggedinUser}</li>
           </ul>
         </div>
       </div>
