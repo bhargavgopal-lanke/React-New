@@ -9,21 +9,21 @@ import Cart from "./src/components/HeaderSubRoutes/Cart";
 import RestaurentMenu from "./src/components/RestaurentMenu";
 import UseClass from "./src/components/HeaderSubRoutes/AboutClass";
 import ContactComponent from "./src/components/HeaderSubRoutes/ContactClass";
-import userContext from "./src/utils/UseContext";
+import userContext from "./src/utils/UserContext";
 
 const AppLayout = () => {
-  const [userName, setuserName] = useState();
+  const [userName, setUserName] = useState();
   // make an APi call to send the user name and password
   useEffect(() => {
     const data = {
       name: "Bhargav Gopal",
     };
-    setuserName(data.name);
+    setUserName(data.name);
   }, []);
 
   return (
     <div className="app">
-      <userContext.Provider value={{ loggedinUser: userName }}>
+      <userContext.Provider value={{ loggedinUser: userName, setUserName }}>
         <Header />
         <BodyRes />
       </userContext.Provider>

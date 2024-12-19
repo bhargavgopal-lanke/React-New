@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import logoimage from "../../public/logo-image.webp";
 import { NavLink } from "react-router";
 import useOnlineStatus from "../Helper/useOnlineStatus";
-import userContext from "../utils/UseContext";
+import userContext from "../utils/UserContext";
 
 const Header = () => {
   const [loginState, setLoginState] = useState("Login");
