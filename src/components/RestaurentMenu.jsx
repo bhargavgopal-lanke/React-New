@@ -10,7 +10,7 @@ import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurentMenu = () => {
   const { menuData } = useRestaurentMenu();
-  const [showIndex, setShowIndex] = useState(1);
+  const [showIndex, setShowIndex] = useState(null);
 
   const { restaurantMenu, categories, menuListItemsCard } = menuListFunction(
     menuData
