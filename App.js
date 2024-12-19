@@ -13,7 +13,7 @@ import userContext from "./src/utils/UseContext";
 
 const AppLayout = () => {
   const [userName, setuserName] = useState();
-  // make an APi call to get the user data
+  // make an APi call to send the user name and password
   useEffect(() => {
     const data = {
       name: "Bhargav Gopal",
