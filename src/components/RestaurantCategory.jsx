@@ -3,6 +3,7 @@ import CategoryListItems from "./CategoryListItems";
 
 const RestaurantCategory = ({ categoryList, showItems, setShowIndex }) => {
   const { title, itemCards } = categoryList;
+
   const handleClick = () => {
     setShowIndex();
   };

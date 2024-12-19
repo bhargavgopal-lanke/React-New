@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logoimage from "../../public/logo-image.webp";
 import { NavLink } from "react-router";
 import useOnlineStatus from "../Helper/useOnlineStatus";
+import userContext from "../utils/UserContext";
 
 const Header = () => {
   const [loginState, setLoginState] = useState("Login");
+
+  const { loggedinUser } = useContext(userContext);
+  
 
   const handleClick = () => {
     loginState === "Login" ? setLoginState("Logout") : setLoginState("Login");
@@ -22,7 +26,10 @@ const Header = () => {
             <li>
               <strong>Online Status:</strong>
               {showOnline === true ? (
-                <>{/* // <span className="green"></span> */}🟢</>
+                <>
+                  {/* <span className="green"></span>  */}
+                  🟢
+                </>
               ) : (
                 <>
                   {/* // <span className="red"></span> */}
@@ -58,6 +65,7 @@ const Header = () => {
             <li onClick={handleClick} className="login-link">
               {loginState}
             </li>
+            <li className="login-link">{loggedinUser}</li>
           </ul>
         </div>
       </div>

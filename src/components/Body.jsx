@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import RestaurentCard, { withPromotedLabel } from "./RestaurentCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
 import useOnlineStatus from "../Helper/useOnlineStatus";
 import { SWIGGYAPIV4 } from "../utils/constants";
+import userContext from "../utils/UserContext";
 
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
@@ -11,6 +12,7 @@ const BodyRes = () => {
   const [searchInputText, setSearchInputText] = useState("");
 
   const RestoCardPromoted = withPromotedLabel(RestaurentCard);
+  const { loggedinUser, setUserName } = useContext(userContext);
 
   useEffect(() => {
     restuarentCardsData();
@@ -56,6 +58,15 @@ const BodyRes = () => {
             search
           </button>
         </div>
+        <div className="search">
+          <label className="font-bold">User Name:</label>
+          <input
+            type="text"
+            className="form-control"
+            value={loggedinUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
@@ -64,7 +75,7 @@ const BodyRes = () => {
               return rating > 4;
             });
 
-            setListOfRatedRes(listedRestaurents);
+            setFilteredRestaurents(listedRestaurents); 
           }}
         >
           Top Rated Restaurents
