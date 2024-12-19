@@ -75,7 +75,7 @@ const BodyRes = () => {
               return rating > 4;
             });
 
-            setListOfRatedRes(listedRestaurents);
+            setFilteredRestaurents(listedRestaurents); 
           }}
         >
           Top Rated Restaurents
