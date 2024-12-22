@@ -8,11 +8,12 @@ import Cart from "./src/components/HeaderSubRoutes/Cart";
 import RestaurentMenu from "./src/components/RestaurentMenu";
 // import UseClass from "./src/components/HeaderSubRoutes/AboutClass";
 // import ContactComponent from "./src/components/HeaderSubRoutes/ContactClass";
-import UserContext from "./src/utils/UserContext";
 import Layout from "./src/components/Layout";
 
 const AppLayout = () => {
-  const Grocery = lazy(() => import("./src/components/Grocery"));
+  const Grocery = lazy(() =>
+    import("./src/components/HeaderSubRoutes/Grocery")
+  );
 
   return (
     <div className="app">
