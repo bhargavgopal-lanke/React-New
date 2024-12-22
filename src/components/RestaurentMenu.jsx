@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Shimmer from "./Shimmer";
-import Header from "./Header";
 import {
   menuListFunction,
   renderMenuFewerListItems,
@@ -22,7 +21,6 @@ const RestaurentMenu = () => {
 
   return (
     <div className="menu text-center">
-      <Header />
       {menuData === null && <Shimmer />}
       <>
         <div className="my-10">

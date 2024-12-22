@@ -1,6 +1,5 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./src/components/Header";
 import BodyRes from "./src/components/Body";
 import { BrowserRouter, Route, Routes } from "react-router";
 import About from "./src/components/HeaderSubRoutes/About";
@@ -10,47 +9,35 @@ import RestaurentMenu from "./src/components/RestaurentMenu";
 // import UseClass from "./src/components/HeaderSubRoutes/AboutClass";
 // import ContactComponent from "./src/components/HeaderSubRoutes/ContactClass";
 import UserContext from "./src/utils/UserContext";
+import Layout from "./src/components/Layout";
 
 const AppLayout = () => {
-  const [userName, setUserName] = useState();
-  // make an APi call to send the user name and password
-  useEffect(() => {
-    const data = {
-      name: "Bhargav",
-    };
-    setUserName(data.name);
-  }, []);
+  const Grocery = lazy(() => import("./src/components/Grocery"));
 
   return (
     <div className="app">
-      <UserContext.Provider value={{ loggedinUser: userName, setUserName }}>
-        <Header />
-        <BodyRes />
-      </UserContext.Provider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<BodyRes />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/restuarent/:resId" element={<RestaurentMenu />} />
+            <Route
+              path="/grocery"
+              element={
+                <Suspense>
+                  <Grocery />
+                </Suspense>
+              }
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const Grocery = lazy(() => import("./src/components/Grocery"));
-
-root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<AppLayout />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/restuarent/:resId" element={<RestaurentMenu />} />
-      <Route
-        path="/grocery"
-        element={
-          <Suspense>
-            <Grocery />
-          </Suspense>
-        }
-      />
-    </Routes>
-  </BrowserRouter>
-);
+root.render(<AppLayout />);
