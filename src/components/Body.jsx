@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router";
 import useOnlineStatus from "../Helper/useOnlineStatus";
 import { SWIGGYAPIV4 } from "../utils/constants";
-import userContext from "../utils/UserContext";
+import UserContext from "../utils/UserContext";
 
 const BodyRes = () => {
   const [ListOfRatedRes, setListOfRatedRes] = useState([]);
@@ -12,7 +12,7 @@ const BodyRes = () => {
   const [searchInputText, setSearchInputText] = useState("");
 
   const RestoCardPromoted = withPromotedLabel(RestaurentCard);
-  const { loggedinUser, setUserName } = useContext(userContext);
+  const { loggedinUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     restuarentCardsData();

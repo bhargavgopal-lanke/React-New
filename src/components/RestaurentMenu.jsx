@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Shimmer from "./Shimmer";
-import Header from "./Header";
 import {
   menuListFunction,
   renderMenuFewerListItems,
@@ -22,7 +21,6 @@ const RestaurentMenu = () => {
 
   return (
     <div className="menu text-center">
-      <Header />
       {menuData === null && <Shimmer />}
       <>
         <div className="my-10">
@@ -39,9 +37,7 @@ const RestaurentMenu = () => {
                   key={list?.card?.card?.title}
                   categoryList={list?.card?.card}
                   showItems={index === showIndex ? true : false}
-                  setShowIndex={() => {
-                    console.log("index", index);
-                    console.log("showIndex", showIndex);
+                  setShowIndex={() => {            
                     // if the conition is true it means the section already open so setState will set it to null
                     setShowIndex(showIndex === index ? null : index);
                   }}
