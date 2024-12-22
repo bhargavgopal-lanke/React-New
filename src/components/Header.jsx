@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import logoimage from "../../public/logo-image.webp";
 import { NavLink } from "react-router";
 import useOnlineStatus from "../Helper/useOnlineStatus";
-import userContext from "../utils/UserContext";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [loginState, setLoginState] = useState("Login");
 
-  const { loggedinUser } = useContext(userContext);
+  const { loggedinUser } = useContext(UserContext);
   
 
   const handleClick = () => {

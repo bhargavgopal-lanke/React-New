@@ -39,9 +39,7 @@ const RestaurentMenu = () => {
                   key={list?.card?.card?.title}
                   categoryList={list?.card?.card}
                   showItems={index === showIndex ? true : false}
-                  setShowIndex={() => {
-                    console.log("index", index);
-                    console.log("showIndex", showIndex);
+                  setShowIndex={() => {            
                     // if the conition is true it means the section already open so setState will set it to null
                     setShowIndex(showIndex === index ? null : index);
                   }}
