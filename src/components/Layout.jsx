@@ -8,7 +8,7 @@ const Layout = () => {
   // make an APi call to send the user name and password
   useEffect(() => {
     const data = {
-      name: "Bhargav",
+      name: "Bhargav Gopal",
     };
     setUserName(data.name);
   }, []);
