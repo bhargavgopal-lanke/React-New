@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html,
 body {
   margin: 0;
@@ -21,6 +19,8 @@ body {
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding: 10px 30px;
+  width: 100%;
+  z-index: 999;
 }
 
 h1,
@@ -33,7 +33,7 @@ p {
 
 .body-sec {
   width: 80%;
-  margin: 40px auto 0;
+  margin: 10% auto 0;
 }
 
 .nav-items ul li {
@@ -215,4 +215,10 @@ span.red {
   width: 10px;
   height: 10px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .body-sec {
+    margin-top: 25%;
+  }
 }

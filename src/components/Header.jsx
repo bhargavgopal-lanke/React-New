@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="header">
+      <div className="header bg-green-100 fixed top-0 w-11">
         <div className="logo">
           <img src={logoimage} className="w-48" alt="" title="logo" />
         </div>
