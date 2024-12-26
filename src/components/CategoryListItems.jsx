@@ -17,7 +17,13 @@ const CategoryListItems = ({ data }) => {
         } = items?.card?.info;
 
         const handleAdd = () => {
-          store.dispatch(setAddItems("Reducer testing"));
+          store.dispatch(
+            setAddItems({
+              id: id,
+              name: name,
+              price: (price || defaultPrice) / 100,
+            })
+          );
         };
 
         return (

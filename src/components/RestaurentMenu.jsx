@@ -36,6 +36,8 @@ const RestaurentMenu = () => {
                 <RestaurantCategory
                   key={list?.card?.card?.title}
                   categoryList={list?.card?.card}
+                  // map method iterates through all the indexes and if index and showindex are true. 
+                  // it'll set the item to true
                   showItems={index === showIndex ? true : false}
                   setShowIndex={() => {            
                     // if the conition is true it means the section already open so setState will set it to null
