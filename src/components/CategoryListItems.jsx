@@ -1,5 +1,7 @@
 import React from "react";
 import { MENUITEMS_IMGURL } from "../utils/constants";
+import { setAddItems } from "../Slices/CartItems-Slice";
+import store from "../store";
 
 const CategoryListItems = ({ data }) => {
   return (
@@ -13,6 +15,10 @@ const CategoryListItems = ({ data }) => {
           defaultPrice,
           description,
         } = items?.card?.info;
+
+        const handleAdd = () => {
+          store.dispatch(setAddItems("Reducer testing"));
+        };
 
         return (
           <div
@@ -30,7 +36,10 @@ const CategoryListItems = ({ data }) => {
             </div>
             <div className="w-4/12 relative">
               <div className="absolute">
-                <button className="p-2 mx-16 rounded-lg bg-black text-white shawdow-lg">
+                <button
+                  onClick={handleAdd}
+                  className="p-2 mx-16 rounded-lg bg-black text-white shawdow-lg"
+                >
                   Add +
                 </button>
               </div>
