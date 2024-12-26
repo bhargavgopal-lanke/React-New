@@ -17,7 +17,7 @@ const CategoryListItems = ({ data }) => {
         } = items?.card?.info;
 
         const handleAdd = () => {
-          store.dispatch(setAddItems({ name, price }));
+          store.dispatch(setAddItems({ name: name, price: price }));
         };
 
         return (
