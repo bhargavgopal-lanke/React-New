@@ -1,7 +1,10 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
 const initialState = {
-  foodItems: "",
+  cartItems: {
+    name: "",
+    price: "",
+  },
 };
 
 const cartItemsSlice = createSlice({
@@ -9,7 +12,7 @@ const cartItemsSlice = createSlice({
   initialState,
   reducers: {
     setAddItems: (state, action) => {
-      state.foodItems = action.payload;
+      state.cartItems = action.payload;
     },
   },
 });
