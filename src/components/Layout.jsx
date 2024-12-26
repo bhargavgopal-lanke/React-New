@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router";
 import Header from "./Header";
-// import UserContext from "../utils/UserContext";
+import UserContext from "../utils/UserContext";
 import { Provider } from "react-redux";
 import store from "../store";
 
@@ -14,12 +14,13 @@ const Layout = () => {
     };
     setUserName(data.name);
   }, []);
+  
   return (
     <Provider store={store}>
-      {/*  <UserContext.Provider value={{ loggedinUser: userName, setUserName }}> */}
-      <Header />
-      <Outlet />
-      {/* </UserContext.Provider> */}
+      <UserContext.Provider value={{ loggedinUser: userName, setUserName }}>
+        <Header />
+        <Outlet />
+      </UserContext.Provider>
     </Provider>
   );
 };
