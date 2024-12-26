@@ -3,17 +3,19 @@ import logoimage from "../../public/logo-image.webp";
 import { NavLink } from "react-router";
 import useOnlineStatus from "../Helper/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [loginState, setLoginState] = useState("Login");
 
   const { loggedinUser } = useContext(UserContext);
-  
 
   const handleClick = () => {
     loginState === "Login" ? setLoginState("Logout") : setLoginState("Login");
   };
   const showOnline = useOnlineStatus();
+
+  const cartItems = useSelector((state) => state?.cartItemsInfo?.cartItems);
 
   return (
     <div>
@@ -54,7 +56,10 @@ const Header = () => {
             </li>
             <li>
               <NavLink to="/cart" end className="link">
-                Cart
+                Cart{" "}
+                <span className="bg-white text-xs font-bold rounded-full px-2 py-1">
+                  {cartItems.length}
+                </span>
               </NavLink>
             </li>
             <li>
