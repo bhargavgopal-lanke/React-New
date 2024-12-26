@@ -18,7 +18,11 @@ const CategoryListItems = ({ data }) => {
 
         const handleAdd = () => {
           store.dispatch(
-            setAddItems({ name: name, price: (price || defaultPrice) / 100 })
+            setAddItems({
+              id: id,
+              name: name,
+              price: (price || defaultPrice) / 100,
+            })
           );
         };
 
