@@ -5,10 +5,13 @@ import { useNavigate } from "react-router";
 import CategoryListItems from "../CategoryListItems";
 
 const Cart = () => {
+  // it only subscribs to the cartItems.
+  // this below code only updates when there is change in the cartItems
+  // this refers to only subscribing to cartItems in the store.
   const cartItems = useSelector((state) => state?.cart?.cartItems);
 
   const dispatch = useDispatch();
-  
+
   const handleEmptyCart = () => {
     dispatch(clearCart());
   };
@@ -19,6 +22,7 @@ const Cart = () => {
     // going back to the previous page
     navigate(-1);
   };
+
 
   return (
     <div className="body-sec">
@@ -45,6 +49,9 @@ const Cart = () => {
             border border-grey-200 shadow-md mb-6"
       >
         <h1 className="mb-2 text-xl font-bold text-gray-900">Orders</h1>
+        {cartItems.length === 0 && (
+          <h1>Your cart is empty please add items to the cart</h1>
+        )}
         {<CategoryListItems data={cartItems} />}
       </div>
     </div>
