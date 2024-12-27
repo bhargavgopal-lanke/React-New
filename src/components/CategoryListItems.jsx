@@ -1,16 +1,17 @@
 import React from "react";
 import { MENUITEMS_IMGURL } from "../utils/constants";
 import { setAddItems } from "../Slices/CartItems-Slice";
-import store from "../store";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 
 const CategoryListItems = ({ data }) => {
-  
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddItem = (item) => {
     // dispatch an action
     dispatch(setAddItems(item));
+    navigate("/cart");
   };
 
   return (
