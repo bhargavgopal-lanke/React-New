@@ -26,9 +26,10 @@ const Cart = () => {
         <h1 className="mb-2 text-xl font-bold text-gray-900">Orders</h1>
         {cartItems &&
           cartItems.map((item) => {
+            const {id, name, price} = item?.card?.info;
             return (
-              <p className="text-black" key={item.id}>
-                {item.name} - {item.price}
+              <p className="text-black" key={id}>
+                {name} - {price}
               </p>
             );
           })}
