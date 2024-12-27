@@ -4,11 +4,12 @@ const initialState = {
   cartItems: [],
 };
 
-const cartItemsSlice = createSlice({
+const cartReducer = createSlice({
   name: "cartItems",
   initialState,
   reducers: {
     setAddItems: (state, action) => {
+      // we're mutating the state over here.
       state.cartItems.push(action.payload);
     },
     removeItem: (state, action) => {
@@ -20,6 +21,6 @@ const cartItemsSlice = createSlice({
   },
 });
 
-export const { setAddItems, removeItem, clearCart } = cartItemsSlice.actions;
+export const { setAddItems, removeItem, clearCart } = cartReducer.actions;
 
-export default cartItemsSlice.reducer;
+export default cartReducer.reducer;

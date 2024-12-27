@@ -15,7 +15,7 @@ const Header = () => {
   };
   const showOnline = useOnlineStatus();
 
-  const cartItems = useSelector((state) => state?.cartItemsInfo?.cartItems);
+  const cartItems = useSelector((state) => state?.cart?.cartItems);
 
   return (
     <div>
