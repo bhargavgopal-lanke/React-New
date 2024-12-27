@@ -4,7 +4,7 @@ import store from "../../store";
 import { clearCart } from "../../Slices/CartItems-Slice";
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state?.cartItemsInfo?.cartItems);
+  const cartItems = useSelector((state) => state?.cart?.cartItems);
 
   const handleEmptyCart = () => {
     store.dispatch(clearCart());
