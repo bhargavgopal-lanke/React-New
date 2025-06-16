@@ -11,7 +11,11 @@ const Contact = () => {
           className="border boder-black p-2 m-2"
           name="message"
         />
-        <button className="border boder-black p-2 m-2 bg-gray-100 rounded-lg">
+        <button
+          type="button"
+          data-testid="button"
+          className="border boder-black p-2 m-2 bg-gray-100 rounded-lg"
+        >
           Submit
         </button>
       </form>
