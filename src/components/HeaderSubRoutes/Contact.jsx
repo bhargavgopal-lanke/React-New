@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div>
-      <div className="body-sec">Contact Page</div>
+      <h1 className="body-sec">Contact Page</h1>
       <form>
         <input type="text" className="border boder-black p-2 m-2" name="name" />
         <input
