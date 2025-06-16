@@ -10,3 +10,4 @@ practice.tsx
 
 coverage/
 /__mocks__
+package-lock.json
