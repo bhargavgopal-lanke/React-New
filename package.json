@@ -19,7 +19,9 @@
   "homepage": "https://github.com/bhargavgopal-lanke/React-New#readme",
   "devDependencies": {
     "@babel/core": "^7.27.4",
+    "@babel/plugin-syntax-jsx": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.3.0",
     "babel-jest": "^30.0.0",
@@ -31,6 +33,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "D": "^1.0.0",
+    "jest-environment-jsdom": "^30.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
