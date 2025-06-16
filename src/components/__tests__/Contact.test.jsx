@@ -8,15 +8,19 @@ describe("Contact component testing", () => {
     return render(<Contact />);
   });
 
-  test("Should render contact component", () => {
+  it("Should render contact component", () => {
     const heading = screen.getByRole("heading");
     // Assertion
     expect(heading).toBeInTheDocument();
   });
 
-  test("Should load button inside contact component", () => {
+  it("Should load button inside contact component", () => {
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   });
-  
+
+  it("shoul load two input fields from contact component", () => {
+    const input = screen.getAllByRole("textbox");
+    expect(input.length).toBe(2);
+  });
 });

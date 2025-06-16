@@ -67,8 +67,8 @@ const Header = () => {
                 Grocery
               </NavLink>
             </li>
-            <li onClick={handleClick} className="login-link">
-              {loginState}
+            <li className="login-link">
+              <button onClick={handleClick}>{loginState}</button>
             </li>
             <li className="login-link">{loggedinUser}</li>
           </ul>
