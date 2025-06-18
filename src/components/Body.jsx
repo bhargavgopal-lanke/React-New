@@ -75,7 +75,7 @@ const BodyRes = () => {
               return rating > 4;
             });
 
-            setFilteredRestaurents(listedRestaurents); 
+            setFilteredRestaurents(listedRestaurents);
           }}
         >
           Top Rated Restaurents
@@ -84,20 +84,20 @@ const BodyRes = () => {
       {/* rendering on the basis of a condition is known as conditional rendering */}
       {ListOfRatedRes.length === 0 && <Shimmer />}
       <div className="res-container">
-        {filteredRestaurents.map((data, index) => {
+        {filteredRestaurents?.map((data) => {
           // v3 api data dstructuring
           //  let resDataList = data?.card?.card?.info;
           //  let resDataListId = data?.card?.card?.info?.id;
           return (
             <Link
-              key={index}
-              to={`/restuarent/${data.info.id}`}
+              key={data?.info?.id}
+              to={`/restuarent/${data?.info?.id}`}
               className="res-card-link"
             >
-              {data.info.promoted === true ? (
-                <RestoCardPromoted key={data.info.id} resData={data.info} />
+              {data?.info?.promoted === true ? (
+                <RestoCardPromoted key={data?.info?.id} resData={data?.info} />
               ) : (
-                <RestaurentCard key={data.info.id} resData={data.info} />
+                <RestaurentCard key={data?.info.id} resData={data?.info} />
               )}
             </Link>
           );

@@ -16,7 +16,7 @@ const CategoryListItems = ({ data }) => {
 
   return (
     <div>
-      {data.map((item) => {
+      {data && data?.map((item) => {
         const {
           id,
           name,
