@@ -1,0 +1,779 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+    "title": "Rice Noodles",
+    "itemCards": [
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "49616416",
+                    "name": "Chicken Fried Rice",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/4df8b12e-679c-47c3-ac61-c1810d4b44de_2b2afc11-1c45-4d2d-8e1f-1ba23e6179df.jpeg",
+                    "price": 14900,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324583",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "NONVEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "3.6",
+                            "ratingCount": "1144 ratings",
+                            "ratingCountV2": "1.1K+"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#D9EFEC",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_medium",
+                            "ratingTextColor": "rating_medium",
+                            "ratingCountTextColor": "rating_medium",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "78411726",
+                    "name": "Double Egg Fried Rice",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/1f5515b0-a41b-4793-a0dc-ba36bf10c6b9_66244f89-0695-4bcc-adb0-86cdc81b47a6.jpeg",
+                    "price": 14500,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324616",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "NONVEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "3.5",
+                            "ratingCount": "127 ratings",
+                            "ratingCountV2": "127"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#D9EFEC",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_medium",
+                            "ratingTextColor": "rating_medium",
+                            "ratingCountTextColor": "rating_medium",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "70892612",
+                    "name": "Chicken 65 Fried Rice",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/3735fb0e-b496-4563-b91d-23851e0fd65e_b5d50e57-6071-4ad0-9114-c6bf319d5040.jpeg",
+                    "price": 15800,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324579",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "NONVEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "3.5",
+                            "ratingCount": "390 ratings",
+                            "ratingCountV2": "390"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#D9EFEC",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_medium",
+                            "ratingTextColor": "rating_medium",
+                            "ratingCountTextColor": "rating_medium",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "153373384",
+                    "name": "Chicken Hakka Noodles",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/18/d16a0669-e770-441d-b61d-d256afed83e0_0bde1cab-3b29-4bd9-87cb-870c309ba98c.jpeg",
+                    "price": 14500,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324593",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "NONVEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "3.1",
+                            "ratingCount": "180 ratings",
+                            "ratingCountV2": "180"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#D9EFEC",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_medium",
+                            "ratingTextColor": "rating_medium",
+                            "ratingCountTextColor": "rating_medium",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "153373383",
+                    "name": "Chicken 65 Noodles",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/2abbff1a-2544-44d3-b94f-6dd302ac6692_0fb9a9ce-c71c-4f93-a2dc-8ffc63f35399.jpeg",
+                    "price": 15800,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324573",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "NONVEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "4.0",
+                            "ratingCount": "209 ratings",
+                            "ratingCountV2": "209"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#C8F9E5",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_very_good",
+                            "ratingTextColor": "rating_very_good",
+                            "ratingCountTextColor": "rating_very_good",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "153373385",
+                    "name": "Double Egg Noodles",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/7e6842d6-26e1-453a-a720-671907901c9e_19ddf15e-8478-4891-bc80-ec2043efd24a.jpeg",
+                    "price": 14500,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324561",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "NONVEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "3.7",
+                            "ratingCount": "101 ratings",
+                            "ratingCountV2": "101"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#D9EFEC",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_medium",
+                            "ratingTextColor": "rating_medium",
+                            "ratingCountTextColor": "rating_medium",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "49616414",
+                    "name": "Veg Fried Rice",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/3ee8f0e8-957e-4afd-848a-5080b82a8208_9d200428-baa2-46e1-9870-112310bd83d2.jpeg",
+                    "isVeg": 1,
+                    "price": 14500,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324640",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "VEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "4.0",
+                            "ratingCount": "313 ratings",
+                            "ratingCountV2": "313"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#C8F9E5",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_very_good",
+                            "ratingTextColor": "rating_very_good",
+                            "ratingCountTextColor": "rating_very_good",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        },
+        {
+            "card": {
+                "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                "info": {
+                    "id": "153373386",
+                    "name": "Veg Soft Noodle",
+                    "category": "Rice Noodles",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/e861a735-386c-4790-8474-a3aa24cb8eac_d7d31199-05e1-4183-b471-b0e6213be6bf.jpeg",
+                    "isVeg": 1,
+                    "price": 14500,
+                    "variants": {},
+                    "variantsV2": {},
+                    "addons": [
+                        {
+                            "groupId": "204324608",
+                            "groupName": "Add - On",
+                            "choices": [
+                                {
+                                    "id": "134150509",
+                                    "name": "Molten Choco Lava 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150512",
+                                    "name": "Walnut Brownie 1pc",
+                                    "price": 9900,
+                                    "inStock": 1,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150510",
+                                    "name": "Potato Cheese Balls",
+                                    "price": 17900,
+                                    "isVeg": 1,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150508",
+                                    "name": "Chicken Nuggets",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150511",
+                                    "name": "Chicken Jalapenos Balls",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                },
+                                {
+                                    "id": "134150513",
+                                    "name": "Chicken Popcorn",
+                                    "price": 17900,
+                                    "isEnabled": 1
+                                }
+                            ],
+                            "maxAddons": 6,
+                            "maxFreeAddons": -1
+                        }
+                    ],
+                    "nextAvailableAtMessage": "Next available at 10:40 pm, tomorrow",
+                    "itemAttribute": {
+                        "vegClassifier": "VEG"
+                    },
+                    "ribbon": {},
+                    "type": "ITEM",
+                    "itemBadge": {},
+                    "badgesV2": {},
+                    "ratings": {
+                        "aggregatedRating": {
+                            "rating": "3.7",
+                            "ratingCount": "111 ratings",
+                            "ratingCountV2": "111"
+                        },
+                        "ratingsPresentationConfig": {
+                            "bgGradient": {
+                                "colours": [
+                                    "#D9EFEC",
+                                    "#FFFFFF"
+                                ],
+                                "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                            },
+                            "ratingIconColor": "rating_medium",
+                            "ratingTextColor": "rating_medium",
+                            "ratingCountTextColor": "rating_medium",
+                            "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                            "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                        }
+                    }
+                },
+                "analytics": {},
+                "hideRestaurantDetails": true
+            }
+        }
+    ],
+    "subtitleSuffix": {},
+    "image": "FOOD_CATALOG/IMAGES/CMS/2025/2/19/4df8b12e-679c-47c3-ac61-c1810d4b44de_2b2afc11-1c45-4d2d-8e1f-1ba23e6179df.jpeg",
+    "categoryId": "54130140"
+}
