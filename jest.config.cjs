@@ -12,6 +12,8 @@ module.exports = {
     "\\.(css|less|scss)$": "identity-obj-proxy", // Add this if you import CSS/SCSS files too
   },
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}"],
+  collectCoverage: true,
+  coverageReporters: ["json", "lcov", "text", "html"],
   coveragePathIgnorePatterns: ["/node_modules/"],
 
   // If you're using ES modules in Node.js for source files, you might also need:
