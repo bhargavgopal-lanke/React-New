@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   margin: 0;
@@ -19,8 +15,6 @@ body {
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding: 10px 30px;
-  width: 100%;
-  z-index: 999;
 }
 
 h1,
@@ -33,7 +27,7 @@ p {
 
 .body-sec {
   width: 80%;
-  margin: 10% auto 0;
+  margin: 40px auto 0;
 }
 
 .nav-items ul li {
@@ -103,7 +97,6 @@ p {
 }
 
 .filter-btn {
-  margin: 30px 0; 
   padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -216,10 +209,4 @@ span.red {
   width: 10px;
   height: 10px;
   margin-left: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .body-sec {
-    margin-top: 25%;
-  }
 }

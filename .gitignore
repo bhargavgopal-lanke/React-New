@@ -1,3 +1,13 @@
+# dependencies
+
 /node_modules
 /.parcel-cache
 /dist
+
+# practice file
+practice.tsx
+
+
+coverage/
+/__mocks__
+package-lock.json
