@@ -23,7 +23,6 @@ const Cart = () => {
     navigate(-1);
   };
 
-
   return (
     <div className="body-sec">
       <div className="mb-3 text-2xl font-bold">Cart Page</div>

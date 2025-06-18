@@ -1,0 +1,52 @@
+{
+    "id": "762480",
+    "name": "Rayalaseema Spice",
+    "city": "3",
+    "slugs": {
+        "restaurant": "rayala-seema-spice-madhapur-madhapur"
+    },
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/11/b772223c-2cf4-4ee9-a5ac-c4503cfe8104_762480 (1).jpg",
+    "locality": "Serlingampally Circle No 20",
+    "areaName": "Madhapur",
+    "costForTwo": "₹400 for two",
+    "cuisines": [
+        "Biryani",
+        "Chinese"
+    ],
+    "avgRating": 3.9,
+    "feeDetails": {
+        "restaurantId": "762480",
+        "title": "Delivery Charge",
+        "amount": "0"
+    },
+    "totalRatingsString": "3.1K+",
+    "sla": {
+        "deliveryTime": 42,
+        "minDeliveryTime": 40,
+        "maxDeliveryTime": 45,
+        "serviceability": "SERVICEABLE",
+        "slaString": "40-45 MINS",
+        "lastMileTravelString": "4.0 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2025-06-18 23:55:00",
+        "opened": true
+    },
+    "badges": {},
+    "aggregatedDiscountInfoV3": {
+        "header": "₹165 OFF",
+        "subHeader": "ABOVE ₹449",
+        "discountTag": "FLAT DEAL",
+        "headerTypeV2": "HEADER_TYPE_V2_CRICKET_MATCH",
+        "logoCtx": {
+            "text": "BENEFITS"
+        }
+    },
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "--"
+        }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}
