@@ -20,7 +20,7 @@ const RestaurentMenu = () => {
   // const renderFewListItems = renderMenuFewerListItems(menuListItemsCard);
 
   return (
-    <div className="body-sec text-center">
+    <div className="body-sec text-center" data-testid="restuarentMenu-id">
       {menuData === null && <Shimmer />}
       <>
         <div className="my-10">
@@ -36,10 +36,10 @@ const RestaurentMenu = () => {
                 <RestaurantCategory
                   key={list?.card?.card?.title}
                   categoryList={list?.card?.card}
-                  // map method iterates through all the indexes and if index and showindex are true. 
+                  // map method iterates through all the indexes and if index and showindex are true.
                   // it'll set the item to true
                   showItems={index === showIndex ? true : false}
-                  setShowIndex={() => {            
+                  setShowIndex={() => {
                     // if the conition is true it means the section already open so setState will set it to null
                     setShowIndex(showIndex === index ? null : index);
                   }}
