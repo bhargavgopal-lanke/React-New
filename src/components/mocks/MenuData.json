@@ -1,0 +1,55 @@
+{
+    "id": "436237",
+    "name": "Hot Pot Village",
+    "city": "3",
+    "slugs": {
+        "restaurant": "hot-pot-village-kukatpally-kukatpally"
+    },
+    "cloudinaryImageId": "gxnrqpub9pipc6g3ovpy",
+    "locality": "Kukatpally",
+    "areaName": "Kukatpally",
+    "costForTwo": "₹100 for two",
+    "cuisines": [
+        "South Indian",
+        "Biryani"
+    ],
+    "avgRating": 3.7,
+    "feeDetails": {
+        "restaurantId": "436237",
+        "title": "Delivery Charge",
+        "amount": "0"
+    },
+    "totalRatingsString": "446",
+    "sla": {
+        "deliveryTime": 26,
+        "minDeliveryTime": 25,
+        "maxDeliveryTime": 30,
+        "serviceability": "SERVICEABLE",
+        "slaString": "25-30 MINS",
+        "lastMileTravelString": "4.8 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2025-06-18 23:59:00",
+        "opened": true
+    },
+    "badges": {},
+    "aggregatedDiscountInfoV3": {
+        "header": "₹125 OFF",
+        "subHeader": "ABOVE ₹249",
+        "discountTag": "FLAT DEAL",
+        "logoCtx": {
+            "text": "BENEFITS"
+        }
+    },
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "3.7",
+            "ratingCount": "2.3K+"
+        },
+        "source": "GOOGLE",
+        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}
+

@@ -20,7 +20,7 @@ const RestaurentMenu = () => {
   // const renderFewListItems = renderMenuFewerListItems(menuListItemsCard);
 
   return (
-    <div className="body-sec text-center" data-testId="restuarentMenu-id">
+    <div className="body-sec text-center" data-testid="restuarentMenu-id">
       {menuData === null && <Shimmer />}
       <>
         <div className="my-10">
