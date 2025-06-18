@@ -1,0 +1,55 @@
+{
+    "id": "616745",
+    "name": "Red Bucket Biryani",
+    "city": "3",
+    "slugs": {
+        "restaurant": "red-bucket-biryani-madhapur-madhapur"
+    },
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/20/2c7cf463-8e93-4c40-ab6c-adb170b4556e_616745.jpg",
+    "locality": "Madhapur",
+    "areaName": "Madhapur",
+    "costForTwo": "₹200 for two",
+    "cuisines": [
+        "Biryani"
+    ],
+    "avgRating": 3.9,
+    "feeDetails": {
+        "restaurantId": "616745",
+        "title": "Delivery Charge",
+        "amount": "0"
+    },
+    "totalRatingsString": "4.6K+",
+    "promoted": true,
+    "adTrackingId": "cid=40341cba-3f42-4557-b7cd-3f4ed0f02fbc~p=2~adgrpid=40341cba-3f42-4557-b7cd-3f4ed0f02fbc#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=616745~plpr=COLLECTION~st=biryani~eid=659c2e9d-08dd-4205-b583-3c27bbb6b11f~srvts=1750264205581~collid=56861",
+    "sla": {
+        "deliveryTime": 32,
+        "minDeliveryTime": 30,
+        "maxDeliveryTime": 35,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30-35 MINS",
+        "lastMileTravelString": "3.6 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2025-06-18 23:59:00",
+        "opened": true
+    },
+    "badges": {},
+    "aggregatedDiscountInfoV3": {
+        "header": "50% OFF",
+        "discountTag": "FLAT DEAL",
+        "logoCtx": {
+            "text": "BENEFITS"
+        }
+    },
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "3.7",
+            "ratingCount": "320"
+        },
+        "source": "GOOGLE",
+        "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    "campaignId": "40341cba-3f42-4557-b7cd-3f4ed0f02fbc"
+}

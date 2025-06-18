@@ -1,12 +1,22 @@
 import React from "react";
 import { MENUITEMS_IMGURL } from "../utils/constants";
 import { setAddItems } from "../Slices/CartItems-Slice";
-import store from "../store";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
 
 const CategoryListItems = ({ data }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleAddItem = (item) => {
+    // dispatch an action
+    dispatch(setAddItems(item));
+    // navigate("/cart");
+  };
+
   return (
     <div>
-      {data.map((items) => {
+      {data.map((item) => {
         const {
           id,
           name,
@@ -14,22 +24,12 @@ const CategoryListItems = ({ data }) => {
           price,
           defaultPrice,
           description,
-        } = items?.card?.info;
-
-        const handleAdd = () => {
-          store.dispatch(
-            setAddItems({
-              id: id,
-              name: name,
-              price: (price || defaultPrice) / 100,
-            })
-          );
-        };
+        } = item?.card?.info;
 
         return (
           <div
             key={id}
-            className="m-2 p-2 border-b-2 border-gray-200 text-left flex justify-between"
+            className="m-2 p-2 border-b-2 border-gray-200 text-left flex justify-between w-full"
           >
             <div className="w-9/12">
               <div className="py-2">
@@ -43,7 +43,7 @@ const CategoryListItems = ({ data }) => {
             <div className="w-4/12 relative">
               <div className="absolute">
                 <button
-                  onClick={handleAdd}
+                  onClick={() => handleAddItem(item)}
                   className="p-2 mx-16 rounded-lg bg-black text-white shawdow-lg"
                 >
                   Add +
